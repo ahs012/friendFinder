@@ -1,3 +1,5 @@
+
+//Require friend data
 var friends = require ("../app/data/friends.js");
 
 module.exports = function(app) {
@@ -19,23 +21,22 @@ module.exports = function(app) {
             var eachComp = arrDifference(friends[i].scores, friends[indexNew].scores);
             arrComp.push(eachComp);
         }
-        
-        console.log("The compatibility is " + eachComp);
-        var bestIndex = calcComp(arrComp);
-        console.log("Your best friend is " + friends[bestIndex].name);
+
+        var bestIndex = calcCompatibility(arrComp);
+        console.log("Your best friend is: " + friends[bestIndex].name);
         res.json(friends[bestIndex]);       
     });
 
-    //Helper function to calculate difference between the score arrays
+    // Function for array diference / compatibility
     function arrDifference(arr1, arr2) {
-        var diff= 0;
+        var difference= 0;
         var newArr = [];
         var sum = 0;
         for (var i = 0; i < arr1.length; i++) {
-            diff = arr1[i] - arr2[i];
-            newArr.push(diff);
+            difference = arr1[i] - arr2[i];
+            newArr.push(difference);
         }
-        for (var i=0; i < newArr.length; i++) {
+        for (var i = 0; i < newArr.length; i++) {
             if (newArr[i] >= 0) {
                 sum = newArr[i] + sum;
             } else {
@@ -45,13 +46,13 @@ module.exports = function(app) {
     return sum;
     }
 
-    //Helper function to calculate friend with most compatibility
-    function calcComp (arr) {
-        var mostComp = 41;
+    // Function to calculate friends with the most compatibility
+    function calcCompatibility (arr) {
+        var mostCompatibility = 41;
         var friendIndex;
-        for (var i=0;i<arr.length;i++) {
-            if (mostComp > arr[i]) {
-                mostComp = arr[i];
+        for (var i = 0; i < arr.length; i++) {
+            if (mostCompatibility > arr[i]) {
+                mostCompatibility = arr[i];
                 friendIndex = i;
             }      
         }
