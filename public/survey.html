@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family:'Acme', sans-serif;
+            font-size: 20px;
+        }
+        .jumbotron {
+            margin-top: 40px;
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron"> 
+            <h3>Survey Questions</h3>
+            <hr>
+            <img src="http://az616578.vo.msecnd.net/files/2016/07/24/636049171880072902-263997955_good-friends-best-friends.jpg" alt="Friends">
+            <hr>
+            <h4>About Me</h4>
+        <div class="form-group">
+            <label for="name">Please enter your name: </label>
+            <input type="text" class="form-control" id="name">            
+        </div>
+        <div class="form-group">
+            <label for="name">Paste a link a picture of yourself: </label>
+            <input type="text" class="form-control" id="picture">            
+        </div>
+        <hr>
+        <h4> Answer each question truthfully, from least to most liked (1 => 5 respectively)</h4>
+
+        <div class="form-group">
+            <h4>Question 1</h4>
+            <label for="question1"> I think highly of myself. </label><br>
+            <select class="form-control-sm" id="question1">
+                <option selected>Select an Option</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>        
+        </div>
+
+        <div class="form-group">
+            <h4>Question 2</h4>
+            <label for="question2"> I am always hungry. </label><br>
+            <select class="form-control-sm" id="question2">
+                <option selected>Select an Option</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>        
+        </div>
+
+        <div class="form-group">
+            <h4>Question 3</h4>
+            <label for="question3"> If invited on a night out I am likely to accept. </label><br>
+            <select class="form-control-sm" id="question3">
+                <option selected>Select an Option</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>        
+        </div>
+
+        <div class="form-group">
+            <h4>Question 4</h4>
+            <label for="question4"> I like to go out on weekday nights. </label><br>
+            <select class="form-control-sm" id="question4">
+                <option selected>Select an Option</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>        
+        </div>
+
+        <div class="form-group">
+            <h4>Question 5</h4>
+            <label for="question5"> I like to play video games. </label><br>
+            <select class="form-control-sm" id="question5">
+                <option selected>Select an Option</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>        
+        </div>
+
+        <div class="form-group">
+            <h4>Question 6</h4>
+            <label for="question6"> Family is one of the most important things to me. </label><br>
+            <select class="form-control-sm" id="question6">
+                <option selected>Select an Option</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>        
+        </div>
+
+        <div class="form-group">
+            <h4>Question 7</h4>
+            <label for="question7"> I follow all the rules of the road when driving. </label><br>
+            <select class="form-control-sm" id="question7">
+                <option selected>Select an Option</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>        
+        </div>
+
+        <div class="form-group">
+            <h4>Question 8</h4>
+            <label for="question8"> I workout regularly. </label><br>
+            <select class="form-control-sm" id="question8">
+                <option selected>Select an Option</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>        
+        </div>
+
+        <div class="form-group">
+            <h4>Question 9</h4>
+            <label for="question9"> Travelling is one of my favorite things to do. </label><br>
+            <select class="form-control-sm" id="question9">
+                <option selected>Select an Option</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>        
+        </div>
+
+        <div class="form-group">
+            <h4>Question 10</h4>
+            <label for="question10"> Chinese food is better than Cuban food. </label><br>
+            <select class="form-control-sm" id="question10">
+                <option selected>Select an Option</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>        
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn"><span class="fas fa-user-check"></span>  Submit Survey</button>
+        </div>
+    </div>
+    <footer>    
+        <a href="https://github.com/ahs012/FriendFinder">| GitHub |</a>
+        <a href="https://ahs012.github.io/Portfolio_Updated/">| Portfolio |</a>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">      
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">This is your best match!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 id="bestFriendName"></h4>
+                <img id="bestFriendPic">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script type="text/javascript">
+        $("#submitBtn").on("click", function(event){
+            event.preventDefault();
+            var scoreInput = {
+                score1: $("#question1").val().trim(),
+                score2: $("#question2").val().trim(),
+                score3: $("#question3").val().trim(),
+                score4: $("#question4").val().trim(),
+                score5: $("#question5").val().trim(),
+                score6: $("#question6").val().trim(),
+                score7: $("#question7").val().trim(),
+                score8: $("#question8").val().trim(),
+                score9: $("#question9").val().trim(),
+                score10: $("#question10").val().trim()
+            }
+            //Grabs scoreInput into score var
+            var scores = Object.values(scoreInput);
+            console.log(scores);
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#picture").val().trim(),
+                scores: scores
+            };
+            console.log(newFriend);
+            
+            $.post("api/friends", newFriend, function(data){
+                $("#bestFriendName").text(data.name);
+                $("#bestFriendPic").attr("src", data.photo);
+                $('#myModal').modal('toggle');
+            })
+            
+        });
+    
+    </script>
+</body>    
