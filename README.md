@@ -1,5 +1,8 @@
 # **Friend Finder**
 
+
+![alt text](http://az616578.vo.msecnd.net/files/2016/07/24/636049171880072902-263997955_good-friends-best-friends.jpg)
+
 ## *Node.js & Express Compatibility App*
 
 
